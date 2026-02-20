@@ -1,0 +1,16 @@
+while True:
+    try:
+        # Pede a conta inteira (Ex: 2 + 2 ou 10 / 5)
+        conta = input("Digite a conta (ou 'sair'): ")
+        
+        if conta.lower() == 'sair':
+            break
+            
+        # Calcula e mostra o resultado
+        resultado = eval(conta)
+        print(f"Resultado: {resultado}\n")
+        
+    except ZeroDivisionError:
+        print("Erro: Divisão por zero!\n")
+    except Exception:
+        print("Erro: Formato inválido. Use números e sinais (+, -, *, /).\n")
