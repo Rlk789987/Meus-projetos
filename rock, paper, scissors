@@ -1,0 +1,18 @@
+import random
+
+def jogar():
+    usuario = input("Escolha (pedra, papel, tesoura): ").lower()
+    computador = random.choice(["pedra", "papel", "tesoura"])
+    print(f"Computador escolheu: {computador}")
+
+    if usuario == computador:
+        return "Empate!"
+    
+    if (usuario == "pedra" and computador == "tesoura") or \
+       (usuario == "papel" and computador == "pedra") or \
+       (usuario == "tesoura" and computador == "papel"):
+        return "Você venceu!"
+    
+    return "Você perdeu!"
+
+print(jogar())
